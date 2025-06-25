@@ -1,3 +1,48 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+
+  --primary: #145672;
+  --primary-foreground: #FDFDFD;
+
+  --secondary: #0E394C;
+  --secondary-foreground: #FDFDFD;
+
+  --tertiary: #247BA0;
+  --tertiary-foreground: #FDFDFD;
+
+  --accent: #b55230;
+  --accent-foreground: #FDFDFD;
+
+  --alert-success: #15be78;
+  --alert-error: #eb4b5b;
+  --alert-warning: #f59e0b;
+
+  --background: #FDFDFD;
+  --foreground: #1b1f24;
+
+
+}
+
+@theme inline {
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-foreground: var(--tertiary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-alert-success: var(--alert-success);
+  --color-alert-error: var(--alert-error);
+  --color-alert-warning: var(--alert-warning);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
