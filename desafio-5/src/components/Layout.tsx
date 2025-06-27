@@ -4,7 +4,6 @@ import Footer from './footer';
 
 function Layout() {
   return (
-    <body className='w-full h-full'>
       <div className='w-full h-full min-h-screen flex flex-col justify-between'>
         <Header />
         <main className='font-[Poppins, sans-serif]'>
@@ -12,7 +11,6 @@ function Layout() {
         </main>
         <Footer />
       </div>
-    </body>
   );
 }
 
