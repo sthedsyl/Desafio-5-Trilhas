@@ -1,30 +1,29 @@
-.login-container {
+.loginContainer {
   max-width: 700px; 
   margin: 0px auto;
   padding: 20px;
   text-align: center;
 }
 
-.login-container h2 {
+.loginContainer h2 {
   font-size: 30px;
   margin-bottom: 30px;
   font-weight: 600;
   white-space: nowrap;
-
 }
 
-.login-box {
+.loginBox {
   background-color: #ffffff;
   border: 1px solid #cce4f1;
   border-radius: 10px;
   padding: 30px 20px;
   width: 100%;
   max-width: 500px; 
-  margin:  auto;
+  margin: auto;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-.login-box h3 {
+.loginBox h3 {
   font-family: 'Poppins', sans-serif;
   font-size: 25px;
   font-weight: 500;
@@ -34,30 +33,30 @@
   margin-bottom: 24px;
 }
 
-form {
+.loginBox form {
   display: flex;
   flex-direction: column;
   gap: 20px; 
   text-align: left;
 }
 
-label {
+.loginBox label {
   font-weight: 600;
   font-size: 20px;
   margin-bottom: 4px;
   display: block;
 }
 
-input {
+.loginBox input {
   padding: 14px;
   border: 1px solid #cce4f1;
   border-radius: 8px;
   font-size: 14px;
   width: 100%;
+  box-sizing: border-box;
 }
 
-
-button {
+.loginBox button {
   width: 239px;
   height: 52px;
   background-color: #247BA0;
@@ -71,15 +70,11 @@ button {
   display: block;
 }
 
-button:hover {
+.loginBox button:hover {
   background-color: #1e6888;
 }
 
-button:hover {
-  background-color: #125ea7;
-}
-
-.login-links {
+.loginLinks {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -87,11 +82,11 @@ button:hover {
   font-size: 14px;
 }
 
-.login-links a {
+.loginLinks a {
   color: #333;
   text-decoration: none;
 }
 
-.login-links a:hover {
+.loginLinks a:hover {
   text-decoration: underline;
 }
