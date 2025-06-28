@@ -1,8 +1,9 @@
-body {
+.cadastroWrapper {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
   background-color: #f9f9f9;
+  min-height: 100vh;
 }
 
 .titulo {
@@ -23,33 +24,36 @@ body {
   margin-bottom: 5vh;
 }
 
-.formulario h3 {
+.formTitulo {
   font-size: 26px;
   text-align: center;
   margin-bottom: 24px;
   font-weight: 600;
 }
 
-label {
+.formulario label {
   display: block;
   margin-bottom: 6px;
   font-weight: 600;
   font-size: 18px;
 }
 
-input {
+.formulario input {
   height: 45px;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #a0c9dd;
   border-radius: 8px;
   font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
 }
-input:focus {
+
+.formulario input:focus {
   border-color: #007bff;
 }
 
-button {
+.formulario button {
   background-color: #247BA0;
   color: white;
   font-size: 16px;
@@ -61,10 +65,11 @@ button {
   cursor: pointer;
   align-self: center;
   transition: background-color 0.3s ease;
+  margin: 0 auto;
+  display: block;
 }
 
-
-button:hover {
+.formulario button:hover {
   background-color: #1d6486;
 }
 

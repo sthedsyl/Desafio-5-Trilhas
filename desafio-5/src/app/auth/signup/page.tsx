@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './signup.css';
+import styles from './signup.module.css';
 
 const Signup = () => {
   const [email, setEmail] = useState('');
@@ -25,12 +25,12 @@ const Signup = () => {
   };
 
   return (
-    <div className="cadastro-wrapper">
-      <h2 className="titulo">Faça seu cadastro em nossa plataforma!</h2>
+    <div className={styles.cadastroWrapper}>
+      <h2 className={styles.titulo}>Faça seu cadastro em nossa plataforma!</h2>
 
-      <div className="container">
-        <form className="formulario" onSubmit={handleSubmit}>
-          <h3 className="form-titulo">Cadastrar</h3>
+      <div className={styles.container}>
+        <form className={styles.formulario} onSubmit={handleSubmit}>
+          <h3 className={styles.formTitulo}>Cadastrar</h3>
 
           <label htmlFor="email">Email:</label>
           <input
@@ -69,7 +69,7 @@ const Signup = () => {
           />
 
           <button type="submit">Cadastrar</button>
-          {mensagem && <p className="mensagem">{mensagem}</p>}
+          {mensagem && <p className={styles.mensagem}>{mensagem}</p>}
         </form>
       </div>
     </div>

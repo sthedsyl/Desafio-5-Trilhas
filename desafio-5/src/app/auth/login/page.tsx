@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './login.css';
+import styles from './login.module.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -7,7 +7,6 @@ const Login = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
 
     if (email === 'teste@teste.com' && senha === '123456') {
       alert('Login bem-sucedido!');
@@ -17,9 +16,9 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
+    <div className={styles.loginContainer}>
       <h2>Faça seu login em nossa plataforma!</h2>
-      <div className="login-box">
+      <div className={styles.loginBox}>
         <h3>Entrar</h3>
 
         <form onSubmit={handleSubmit}>
@@ -40,7 +39,7 @@ const Login = () => {
           <button type="submit">Entrar</button>
         </form>
 
-        <div className="login-links">
+        <div className={styles.loginLinks}>
           <a href="#">Esqueci a senha</a>
           <a href="/signup">Não tenho cadastro</a>
         </div>
