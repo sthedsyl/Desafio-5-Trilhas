@@ -21,7 +21,7 @@ interface CarouselProps {
 
 const CarrosselCard = ({ props }: CarouselProps) => {
   return (
-    <Card className="flex flex-col items-center justify-center h-full gap-4 px-8">
+    <Card className="flex flex-col items-center justify-center h-full gap-4 px-8 ">
       <img
         src={props.image}
         alt={props.title}
