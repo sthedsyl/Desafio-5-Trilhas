@@ -36,9 +36,9 @@ const Consultas = () => {
   };
 
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto p-6">
+    <section className="flex flex-col md:flex-row items-center max-w-6xl mx-auto p-6">
       {/* Texto e Formulário */}
-      <div className="md:w-1/2">
+      <div className="md:w-1/2 ">
         <h1 className="text-3xl font-bold text-sky-900 mb-4 leading-snug">
           Marcação de <br /> Consultas e Exames
         </h1>
@@ -47,24 +47,19 @@ const Consultas = () => {
         </p>
 
         {/* Input de CEP */}
-        <div className="flex items-center bg-white border rounded shadow-sm overflow-hidden w-full max-w-md mb-2">
-          <div className="px-3 text-gray-400">
-            📍
-          </div>
+        <div className="flex w-full h-12 gap-1">
           <input
+            className="flex-1 border border-gray-300 rounded-l-md rounded-r-none px-4 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
             type="text"
             placeholder="Digite seu CEP"
             maxLength={8}
             value={cep}
             onChange={(e) => setCep(e.target.value.replace(/\D/g, ''))}
-            className="flex-1 p-3 outline-none"
           />
-          <button
+          <button 
+            className='h-full !rounded-l-none rounded-r-md bg-tertiary hover:bg-primary px-6 text-white font-medium shadow-sm'
             onClick={buscarCep}
             disabled={!cepValido || loading}
-            className={`px-6 py-3 text-white transition ${
-              cepValido ? 'bg-sky-800 hover:bg-sky-700' : 'bg-gray-400 cursor-not-allowed'
-            }`}
           >
             Buscar
           </button>
