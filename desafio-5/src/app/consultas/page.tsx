@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import MedicoImage from '../../assets/medico-ilustracao.png';
+import MedicoImage from "./_assets/medico-ilustracao.png";
 
 const Consultas = () => {
   const [cep, setCep] = useState('');

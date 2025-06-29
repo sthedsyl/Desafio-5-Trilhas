@@ -1,8 +1,177 @@
+"use client";
+import MedicoImage from "./_assets/doutor.png";
+import { Bar } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { useState } from "react";
 
-const Dashboard = () => {
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+
+type Doenca = "Hipertensão" | "Diabetes" | "Dengue" | "Influenza";
+
+const doencasInfo: Record<
+  Doenca,
+  {
+    casos: number;
+    descricao: {
+      oQueE: string;
+      comoPrevenir: string;
+    };
+  }
+> = {
+  Hipertensão: {
+    casos: 8500,
+    descricao: {
+      oQueE:
+        "É uma condição crônica em que a pressão do sangue nos artérias está permanentemente elevada. Isso significa que o coração precisa trabalhar mais para bombear o sangue para o resto do corpo.",
+      comoPrevenir:
+        "Para prevenir a hipertensão, é essencial adotar um estilo de vida saudável, praticar exercícios físicos, reduzir o consumo de sal e evitar o consumo excessivo de álcool e tabaco.",
+    },
+  },
+  Diabetes: {
+    casos: 4800,
+    descricao: {
+      oQueE:
+        "Doença metabólica caracterizada pelo aumento dos níveis de açúcar no sangue, devido à produção insuficiente ou à resistência à insulina.",
+      comoPrevenir:
+        "Manter uma alimentação balanceada, praticar exercícios regularmente e fazer acompanhamento médico são essenciais para prevenir o diabetes.",
+    },
+  },
+  Dengue: {
+    casos: 2600,
+    descricao: {
+      oQueE:
+        "Doença viral transmitida pelo mosquito Aedes aegypti, que causa febre alta, dores musculares e manchas vermelhas na pele.",
+      comoPrevenir:
+        "Eliminar criadouros do mosquito, manter ambientes limpos e usar repelentes ajudam a prevenir a dengue.",
+    },
+  },
+  Influenza: {
+    casos: 1400,
+    descricao: {
+      oQueE:
+        "Infecção viral que afeta o sistema respiratório, causando sintomas como febre, tosse e dor de garganta.",
+      comoPrevenir:
+        "Vacinação anual, higiene das mãos e evitar contato próximo com pessoas infectadas são medidas preventivas importantes.",
+    },
+  },
+};
+
+export default function Dashboard() {
+  const [doencaSelecionada, setDoencaSelecionada] = useState<Doenca>("Hipertensão");
+
+  const chartData = {
+    labels: Object.keys(doencasInfo),
+    datasets: [
+      {
+        label: "Casos",
+        data: Object.values(doencasInfo).map((item) => item.casos),
+        backgroundColor: "#3BA4E0",
+        borderRadius: 5,
+      },
+    ],
+  };
+
+  const chartOptions = {
+    responsive: true,
+    plugins: {
+      legend: { display: false },
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks: {
+          stepSize: 2000,
+        },
+      },
+    },
+  };
+
   return (
-    <div>Dashboard</div>
-  )
-}
+    <main className="bg-[#F7FDFD] min-h-screen font-sans">
+      {/* Boas-vindas */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center p-8 max-w-6xl mx-auto">
+        <div className="mb-8 md:mb-0">
+          {/* Responsividade do texto apenas no mobile */}
+          <h1 className="text-3xl font-bold text-gray-800 mb-2">Bem-vindo (a) ao Dashboard!</h1>
+          <p className="text-gray-600">
+            Tenha acesso a dados atualizados sobre doenças mais comuns em sua região e formas de prevenção.
+          </p>
+        </div>
+        <div className="flex justify-center">
+          <img src={MedicoImage} alt="Ilustração de médico" />
+        </div>
+      </section>
 
-export default Dashboard
+      {/* Título antes do gráfico */}
+      <section className="max-w-3xl mx-auto px-6 mt-10 mb-6">
+        <h2 className="text-2xl font-regular text-sky-800 uppercase">
+          Indicadores de Saúde
+        </h2>
+      </section>
+
+      {/* Filtro Dropdown */}
+      <section className="max-w-3xl mx-auto px-6 mb-8">
+        <label
+          htmlFor="doenca-select"
+          className="block mb-2 font-semibold text-gray-700"
+        >
+          Selecione a doença:
+        </label>
+        <select
+          id="doenca-select"
+          className="w-full p-2 border border-gray-300 rounded-md"
+          value={doencaSelecionada}
+          onChange={(e) => setDoencaSelecionada(e.target.value as Doenca)}
+        >
+          {Object.keys(doencasInfo).map((doenca) => (
+            <option key={doenca} value={doenca}>
+              {doenca}
+            </option>
+          ))}
+        </select>
+      </section>
+
+      {/* Gráfico e bolinhas decorativas */}
+      <section className="bg-white py-10 px-6 md:px-20 text-center relative">
+        <h2 className="text-xl font-bold text-gray-700 mb-6">
+          Indicadores de saúde
+        </h2>
+        <div className="max-w-2xl mx-auto mb-4">
+          <Bar data={chartData} options={chartOptions} />
+        </div>
+
+        {/* Bolinhas decorativas */}
+        <div className="absolute top-4 right-10 space-y-2 hidden md:block">
+          <div className="w-8 h-8 bg-sky-800 rounded-full"></div>
+          <div className="w-5 h-5 bg-sky-500 rounded-full"></div>
+          <div className="w-3 h-3 bg-sky-200 rounded-full"></div>
+        </div>
+      </section>
+
+      {/* Seção informativa */}
+      <section className="px-6 py-12 max-w-3xl mx-auto">
+        <h3 className="text-xl font-semibold text-sky-700 mb-4">
+          {doencaSelecionada}
+        </h3>
+        <div className="bg-white shadow-md p-6 rounded-lg">
+          <h4 className="font-bold text-gray-800 mb-2">O que é?</h4>
+          <p className="text-gray-600 mb-4">
+            {doencasInfo[doencaSelecionada].descricao.oQueE}
+          </p>
+          <h4 className="font-bold text-gray-800 mb-2">Como prevenir?</h4>
+          <p className="text-gray-600">
+            {doencasInfo[doencaSelecionada].descricao.comoPrevenir}
+          </p>
+        </div>
+      </section>
+    </main>
+  );
+}
