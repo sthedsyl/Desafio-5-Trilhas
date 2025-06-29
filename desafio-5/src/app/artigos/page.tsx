@@ -1,6 +1,6 @@
 import Hero from "./_components/hero";
 import Carrossel from "./_components/carousel";
-import ondas from "../artigos/_assets/ondas.svg";
+import Ondas from "./_assets/ondas.svg"; 
 
 const Artigos = () => {
   return (
@@ -9,7 +9,7 @@ const Artigos = () => {
         <Hero />
         <Carrossel />
       </div>
-      <img src={ondas} className="w-full object-cover z-[-1] -mb-16"/>
+      <img src={Ondas} className="w-full object-cover z-[-1] -mb-16"/>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import Email from '../assets/icons/email.svg';
 
 const Footer = () => {
   return (
-    <footer className='flex flex-col justify-center items-center gap-8 p-6 bg-[#0E394C] text-primary-foreground font-semibold w-full h-full'>
+    <footer className='flex flex-col justify-center items-center gap-6 p-6 bg-[#0E394C] text-primary-foreground font-medium w-full h-full'>
       <img className='flex justify-center items-center' src={Logo2}alt="logo" />
       <nav className='w-full flex justify-center items-center gap-6'>
         <a href="">Início</a>
