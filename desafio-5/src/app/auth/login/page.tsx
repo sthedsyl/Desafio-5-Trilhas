@@ -40,7 +40,7 @@ const Login = () => {
         </form>
 
         <div className={styles.loginLinks}>
-          <a href="#">Esqueci a senha</a>
+          <a href="/redefinirSenha">Esqueci a senha</a>
           <a href="/signup">Não tenho cadastro</a>
         </div>
       </div>

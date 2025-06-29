@@ -1,41 +1,43 @@
 .cadastroWrapper {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #f9f9f9;
-  min-height: 100vh;
+  max-width: 700px; 
+  margin: 0px auto;
+  padding: 20px;
+  text-align: center;
 }
 
 .titulo {
   font-size: 30px;
-  font-weight: 600;
-  margin-top: 40px;
   margin-bottom: 30px;
-  text-align: center;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .container {
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 32px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
-  margin-bottom: 5vh;
+  background-color: #ffffff;
+  border: 1px solid #cce4f1;
+  border-radius: 10px;
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 500px; 
+  margin: auto;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .formTitulo {
-  font-size: 26px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 100%;
   text-align: center;
   margin-bottom: 24px;
-  font-weight: 600;
 }
 
 .formulario label {
   display: block;
   margin-bottom: 6px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 18px;
+  text-align: left;
 }
 
 .formulario input {
@@ -47,10 +49,6 @@
   font-size: 14px;
   width: 100%;
   box-sizing: border-box;
-}
-
-.formulario input:focus {
-  border-color: #007bff;
 }
 
 .formulario button {
@@ -72,6 +70,7 @@
 .formulario button:hover {
   background-color: #1d6486;
 }
+
 
 .mensagem {
   margin-top: 16px;

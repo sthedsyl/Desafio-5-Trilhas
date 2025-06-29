@@ -1,18 +1,18 @@
-.loginContainer {
+.container {
   max-width: 700px; 
   margin: 0px auto;
   padding: 20px;
   text-align: center;
 }
 
-.loginContainer h2 {
+.titulo {
   font-size: 30px;
   margin-bottom: 30px;
   font-weight: 600;
   white-space: nowrap;
 }
 
-.loginBox {
+.formulario {
   background-color: #ffffff;
   border: 1px solid #cce4f1;
   border-radius: 10px;
@@ -23,7 +23,7 @@
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-.loginBox h3 {
+.formulario h3 {
   font-size: 25px;
   font-weight: 500;
   color: #000000;
@@ -32,61 +32,61 @@
   margin-bottom: 24px;
 }
 
-.loginBox form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px; 
-  text-align: left;
-}
-
-.loginBox label {
-  font-weight: 500;
-  font-size: 20px;
+.formulario label {
   display: block;
-  
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: left;  
 }
 
-.loginBox input {
-  padding: 14px;
-  border: 1px solid #cce4f1;
+.formulario input {
+  height: 45px;
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #a0c9dd;
   border-radius: 8px;
   font-size: 14px;
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 20px;
 }
 
-.loginBox button {
-  width: 239px;
-  height: 52px;
+.formulario button {
   background-color: #247BA0;
   color: white;
+  font-size: 16px;
+  font-weight: 500;
+  width: 239px;
+  height: 52px;
   border: 1px solid #247BA0;
   border-radius: 10px;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 16px;
-  margin: 0 auto; 
+  align-self: center;
+  transition: background-color 0.3s ease;
+  margin: 0 auto;
   display: block;
 }
 
-.loginBox button:hover {
+.formulario button:hover {
   background-color: #1e6888;
 }
 
-.loginLinks {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+.voltarLogin {
+  margin-top: 10px;
+  text-align: center;
   font-size: 14px;
+  color: #000;
+  cursor: pointer;
 }
 
-.loginLinks a {
-  color: #333;
-  text-decoration: none;
-}
-
-.loginLinks a:hover {
+.voltarLogin:hover {
   text-decoration: underline;
 }
+
+.mensagem {
+  text-align: center;
+  margin-top: 10px;
+  color: green;
+  font-weight: 500;
+}
+
