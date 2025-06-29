@@ -35,6 +35,9 @@ const Consultas = () => {
     }
   };
 
+  // Link para abrir o Google Maps numa nova aba com busca dinâmica
+  const linkDoMapa = `https://www.google.com/maps?q=unidades+de+saúde+perto+de+${cep}`;
+
   return (
     <section className="flex flex-col md:flex-row items-center max-w-6xl mx-auto p-6">
       {/* Texto e Formulário */}
@@ -82,6 +85,16 @@ const Consultas = () => {
                 <p><strong>Bairro:</strong> {r.bairro}</p>
                 <p><strong>Logradouro:</strong> {r.logradouro}</p>
                 <p><strong>UF:</strong> {r.uf}</p>
+
+                {/* Botão para abrir o Google Maps em nova aba */}
+                <a
+                  href={linkDoMapa}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                >
+                  Ver unidades de saúde próximas no Google Maps
+                </a>
               </div>
             ))}
         </div>
