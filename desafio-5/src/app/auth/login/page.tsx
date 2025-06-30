@@ -1,17 +1,27 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './login.module.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
+  const [mensagem, setMensagem] = useState('');
+  const [tipoMensagem, setTipoMensagem] = useState<'sucesso' | 'erro' | ''>('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (email === 'teste@teste.com' && senha === '123456') {
-      alert('Login bem-sucedido!');
+    if (email === 'teste@teste.com' && senha === '123') {
+      setMensagem('Login bem-sucedido!');
+      setTipoMensagem('sucesso');
+
+      setTimeout(() => {
+        navigate('/perfil/admin');
+      }, 1000); 
     } else {
-      alert('Email ou senha inválidos!');
+      setMensagem('Email ou senha inválidos!');
+      setTipoMensagem('erro');
     }
   };
 
@@ -25,6 +35,7 @@ const Login = () => {
           <label>Email:</label>
           <input
             type="email"
+            required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -32,12 +43,25 @@ const Login = () => {
           <label>Senha:</label>
           <input
             type="password"
+            required
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
           />
 
           <button type="submit">Entrar</button>
         </form>
+
+        {mensagem && (
+          <p
+            className={
+              tipoMensagem === 'sucesso'
+                ? styles.mensagemSucesso
+                : styles.mensagemErro
+            }
+          >
+            {mensagem}
+          </p>
+        )}
 
         <div className={styles.loginLinks}>
           <a href="/redefinirSenha">Esqueci a senha</a>
@@ -49,6 +73,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
-
