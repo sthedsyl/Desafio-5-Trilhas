@@ -10,6 +10,7 @@ import Signup from './app/auth/signup/page'
 import Admin from './app/perfil/admin/page'
 import User from './app/perfil/user/page'
 import RedefinirSenha from './app/auth/redefinirSenha/page'
+import GerenciadorDeArtigos from './app/perfil/gerenciador-de-artigo/page'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 createRoot(document.getElementById('root')!).render(
@@ -25,6 +26,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="redefinirSenha" element={<RedefinirSenha />} />
         <Route path="perfil/admin" element={<Admin />} />
         <Route path="perfil/user" element={<User />} />
+        <Route path="perfil/gerenciador-de-artigo" element={<GerenciadorDeArtigos />} />  
       </Route>
     </Routes>
   </BrowserRouter>
