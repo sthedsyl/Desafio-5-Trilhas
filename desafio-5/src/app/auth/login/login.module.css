@@ -90,3 +90,15 @@
 .loginLinks a:hover {
   text-decoration: underline;
 }
+
+.mensagemSucesso {
+  color: green;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.mensagemErro {
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}
