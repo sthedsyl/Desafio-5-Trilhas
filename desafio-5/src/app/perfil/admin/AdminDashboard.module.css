@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  height: 100vh;
+  background: #fdfdfd;
+}
+
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+.title {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  color: #1A6483;
+  
+}
+
+.card {
+  background: white;
+  border: 1px solid #bcd6e0;
+  border-radius: 8px;
+  padding: 20px;
+  width: 380px;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.section {
+  margin-bottom: 60px;
+  color: #1A6483;
+
+}
+
+.sectionHeader {
+  display: flex;
+  gap: 400px;
+  align-items: center;
+  color: #247BA0;
+  font-size: 20px;
+  font-weight: 500;
+
+}
+
+.boxGrid {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.box {
+  width: 250px;
+  height: 90px;
+  background-color: #FFFFFF;
+  border: 1px solid #bcd6e0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.table {
+  width: 800px;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: white;
+  font-size: 20px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #bcd6e0;
+  padding: 12px;
+  text-align: left;
+}
