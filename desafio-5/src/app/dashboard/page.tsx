@@ -110,11 +110,21 @@ export default function Dashboard() {
         </div>
       </section>
 
-      {/* Título antes do gráfico */}
-      <section className="max-w-3xl mx-auto px-6 mt-10 mb-6">
-        <h2 className="text-2xl font-regular text-sky-800 uppercase">
+      {/* Gráficos com Power BI */}
+      <section className="max-w-6xl mx-auto px-6 py-10">
+        <h2 className="text-xl font-bold text-sky-700 mb-6 font-poppins">
           Indicadores de Saúde
         </h2>
+        <div className="rounded-2xl overflow-hidden shadow-lg border border-sky-100">
+          <iframe
+            title="Dashboard Power BI"
+            src="https://app.powerbi.com/view?r=eyJrIjoiYTVmMGZkODctZmM1ZC00OTlkLWE0MjItZTI2OTE0NjRmZWZlIiwidCI6ImIzYzAwMzk5LTEwNjEtNGEyOS04NWE2LWQxNWEyMzljM2FkNSJ9"
+            width="100%"
+            height="600"
+            allowFullScreen
+            className="w-full"
+          ></iframe>
+        </div>
       </section>
 
       {/* Filtro Dropdown */}
@@ -137,23 +147,6 @@ export default function Dashboard() {
             </option>
           ))}
         </select>
-      </section>
-
-      {/* Gráfico e bolinhas decorativas */}
-      <section className="bg-white py-10 px-6 md:px-20 text-center relative">
-        <h2 className="text-xl font-bold text-gray-700 mb-6">
-          Indicadores de saúde
-        </h2>
-        <div className="max-w-2xl mx-auto mb-4">
-          <Bar data={chartData} options={chartOptions} />
-        </div>
-
-        {/* Bolinhas decorativas */}
-        <div className="absolute top-4 right-10 space-y-2 hidden md:block">
-          <div className="w-8 h-8 bg-sky-800 rounded-full"></div>
-          <div className="w-5 h-5 bg-sky-500 rounded-full"></div>
-          <div className="w-3 h-3 bg-sky-200 rounded-full"></div>
-        </div>
       </section>
 
       {/* Seção informativa */}
