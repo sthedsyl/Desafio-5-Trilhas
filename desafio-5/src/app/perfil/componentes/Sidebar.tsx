@@ -6,7 +6,7 @@ const Sidebar = () => {
   return (
     <div className={styles.sidebar}>
       <nav className={styles.menu}>
-        <Link to="/admin" className={styles.menuItem}>
+        <Link to="/perfil/admin" className={styles.menuItem}>
           <LayoutDashboard size={20} />
           Visão Geral
         </Link>

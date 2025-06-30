@@ -1,6 +1,11 @@
+import Sidebar from '../componentes/Sidebar';
+
 const gerenciadorDeArtigos = () => {
   return (
-    <div>Gerenciador de Artigos</div>
+    <div>
+      <Sidebar />
+      
+    </div>
   )
 }
 

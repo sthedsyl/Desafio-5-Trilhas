@@ -26,7 +26,7 @@ const AdminDashboard = () => {
         <section className={styles.section}>
           <div className={styles.sectionHeader}>
             <h2>Gerenciar Artigos</h2>
-            <button onClick={() => navigate('/admin/adicionar-artigo')}>
+            <button onClick={() => navigate('/perfil/criar-artigo')}>
               + Adicionar Artigo
             </button>
           </div>
@@ -40,7 +40,7 @@ const AdminDashboard = () => {
         <section className={styles.section}>
           <div className={styles.sectionHeader}>
             <h2>Gerenciar Usuários</h2>
-            <button onClick={() => navigate('/admin/adicionar-usuario')}>
+            <button onClick={() => navigate('/perfil/criar-usuario')}>
               + Adicionar Usuário
             </button>
           </div>

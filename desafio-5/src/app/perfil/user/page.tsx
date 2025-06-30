@@ -1,6 +1,10 @@
+import Sidebar from '../componentes/Sidebar';
+
 const User = () => {
   return (
-    <div>User</div>
+    <div>
+      <Sidebar />
+    </div>
   )
 }
 
