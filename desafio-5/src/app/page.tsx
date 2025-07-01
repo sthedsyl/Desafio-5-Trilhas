@@ -12,7 +12,7 @@ function App() {
             <button id="btn-consultas" className={styles.secondaryButton}>Consultas</button>
           </div>
         </div>
-        <img src="/assets/66139 (1) 1.png" alt="Ilustração Saúde" className={styles.heroImage} />
+        <img src="./public/66139 (1) 1 (1).png" alt="Ilustração Saúde" className={styles.heroImage} />
       </section>
 
       <h2 className={styles.sectionTitle}>Principais Funcionalidades</h2>
