@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.formArea {
+  flex: 1;
+  padding: 1px 48px;
+  max-width: 960px;
+}
+
+.formArea h2 {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input, .select {
+  padding: 10px;
+  border: 1px solid #93c4d1;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #145672;
+  font-weight: 500;
+}
+
+select {
+    width: 350px;
+
+}
+
+.input::placeholder,
+.select:invalid {
+  color: #145672;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+
+.linha {
+  display: flex;
+  gap: 40px;
+}
+
+.dataInput {
+  display: flex;
+  align-items: center;
+  border: 1px solid #bcd6e0;
+  border-radius: 6px;
+  padding: 10px 10px;
+  background-color: white;
+  flex: 1;
+  gap: 8px;
+  color: #145672;
+  font-weight: 500;
+
+}
+.dataInput input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #1e4a5a;
+  width: 100%;
+}
+
+.btnSalvar {
+  align-self: flex-end;
+  padding: 10px 90px;
+  border: 1px solid #247ba0;
+  border-radius: 6px;
+  background: white;
+  color: #247ba0;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btnSalvar:hover {
+  background-color: #247ba0;
+  color: white;
+}
+
+.mensagem {
+  margin-top: 20px;
+  color: #1e6c2c;
+  font-weight: 500;
+  background-color: #d9f3e2;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #b4e1c7;
+}

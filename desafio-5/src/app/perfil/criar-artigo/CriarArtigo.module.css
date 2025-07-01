@@ -114,22 +114,21 @@
 }
 
 .saveBtn {
-  background-color: #247BA0;
-  color: white;
+  align-self: flex-end;
   padding: 10px 90px;
-  border: none;
+  border: 1px solid #247ba0;
   border-radius: 6px;
-  cursor: pointer;
+  background: white;
+  color: #247ba0;
   font-weight: 500;
-  transition: 0.3s;
-  
-
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .saveBtn:hover {
-  background-color: #12323e;
+  background-color: #247ba0;
+  color: white;
 }
-
 .successMsg {
   margin-top: 20px;
   color: #1e6c2c;
