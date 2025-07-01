@@ -1,0 +1,95 @@
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #fdfdfd;
+}
+
+.content {
+  flex: 1;
+   padding: 1px 48px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header h2 {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.addButton {
+  background-color: white;
+  color: #247BA0;
+  padding: 8px 14px;
+  border: 1px solid #247BA0;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+  font-weight: 500;
+
+
+  cursor: pointer;
+}
+
+.addButton button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  font-weight: inherit;
+  padding: 0;
+  margin: 0;
+
+
+}
+
+.addButton:hover {
+  background-color: #2a5377;
+}
+
+.table {
+  background-color: #fff;
+  border: 1px solid #d3e0e5;
+  border-radius: 6px;
+  overflow: hidden;
+  color: #1A6483;
+  font-weight: 500;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr 40px;
+  background-color: #eef6fa;
+  padding: 12px 20px;
+  font-weight: bold;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 40px;
+  padding: 12px 20px;
+  align-items: center;
+  background-color: #f4f7f8;
+  border-top: 1px solid #d3e0e5;
+}
+
+.tableRow:nth-child(even) {
+  background-color: #B9D1DD;
+}
+
+.tableRow select {
+  padding: 6px;
+  border: 1px solid #c0d3db;
+  border-radius: 4px;
+}
+
+.trashIcon {
+  color: #1e4a5a;
+  cursor: pointer;
+}
