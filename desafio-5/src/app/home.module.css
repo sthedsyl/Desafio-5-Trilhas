@@ -8,6 +8,16 @@
   box-sizing: border-box;
 }
 
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem;
+  padding-left: 6rem;
+}
+
 .heroSection {
   display: flex;
   align-items: center;
@@ -19,23 +29,27 @@
 
 .heroText {
   max-width: 600px;
+  text-align: left;
 }
 
 .heroText h1 {
   font-size: 2.5rem;
   color: #000;
   margin-bottom: 1rem;
+  text-align: left;
 }
 
 .heroText p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
   color: #333;
+  text-align: left;
 }
 
 .heroButtons {
   display: flex;
   gap: 1rem;
+  justify-content: flex-start;
 }
 
 .primaryButton {
@@ -60,7 +74,7 @@
   font-size: 1rem;
 }
 
-.heroImage {
+.saudeImage {
   max-width: 400px;
   width: 100%;
 }
@@ -74,6 +88,7 @@
   font-size: 2rem;
   color: #23677B;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .sectionSubtitle {
@@ -94,18 +109,33 @@
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   max-width: 300px;
-  text-align: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: space-between;
+}
+
+.featureBox .iconTitle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .featureBox h3 {
-  margin: 1rem 0;
+  margin: 0;
   color: #23677B;
+  font-size: 1.2rem;
 }
 
 .featureBox p {
   margin-bottom: 1rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #333;
+  text-align: left;
+  line-height: 1.4;
 }
 
 .learnMoreButton {
@@ -117,11 +147,32 @@
   cursor: pointer;
   font-weight: bold;
   font-size: 1rem;
+  display: block;
+  margin-top: auto;
+  align-self: center;
 }
 
 .objectiveSection {
   text-align: center;
   padding: 4rem 2rem;
+}
+
+.objective {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.objective h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #000;
+  text-align: center;
+}
+
+.objective p {
+  font-size: 1.2rem;
+  color: #23677B;
+  text-align: center;
 }
 
 .objectiveSection h3 {
