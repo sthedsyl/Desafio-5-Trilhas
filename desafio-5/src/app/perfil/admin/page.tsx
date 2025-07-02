@@ -44,7 +44,7 @@ const AdminDashboard = () => {
               + Adicionar Usuário
             </button>
           </div>
-          <table className={styles.table} onClick={() => navigate('/admin/usuarios')}>
+          <table className={styles.table} onClick={() => navigate('')}>
             <thead>
               <tr>
                 <th>Nome</th>
