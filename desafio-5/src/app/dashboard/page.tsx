@@ -1,6 +1,5 @@
 "use client";
 import MedicoImage from "./_assets/doutor.png";
-import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -66,33 +65,6 @@ const doencasInfo: Record<
 
 export default function Dashboard() {
   const [doencaSelecionada, setDoencaSelecionada] = useState<Doenca>("Hipertensão");
-
-  const chartData = {
-    labels: Object.keys(doencasInfo),
-    datasets: [
-      {
-        label: "Casos",
-        data: Object.values(doencasInfo).map((item) => item.casos),
-        backgroundColor: "#3BA4E0",
-        borderRadius: 5,
-      },
-    ],
-  };
-
-  const chartOptions = {
-    responsive: true,
-    plugins: {
-      legend: { display: false },
-    },
-    scales: {
-      y: {
-        beginAtZero: true,
-        ticks: {
-          stepSize: 2000,
-        },
-      },
-    },
-  };
 
   return (
     <main className="bg-[#F7FDFD] min-h-screen font-sans">
