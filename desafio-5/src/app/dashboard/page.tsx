@@ -65,7 +65,6 @@ const doencasInfo: Record<
 
 export default function Dashboard() {
   const [doencaSelecionada, setDoencaSelecionada] = useState<Doenca>("Hipertensão");
-
   return (
     <main className="bg-[#F7FDFD] min-h-screen font-sans">
       {/* Boas-vindas */}

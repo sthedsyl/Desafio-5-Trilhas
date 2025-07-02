@@ -1,6 +1,7 @@
 import CardsServices from '@/components/home/cards-services'
 import styles from './home.module.css'
 
+
 function App() {
   return (
     <>
@@ -13,7 +14,7 @@ function App() {
             <button id="btn-consultas" className={styles.secondaryButton}>Consultas</button>
           </div>
         </div>
-        <img src="./../../public/saude.svg" alt="Ilustração Saúde" className={styles.saudeImage} />
+        <img src="/saude.svg" alt="Ilustração Saúde" className={styles.saudeImage} />
        
       </section>
 
@@ -22,17 +23,17 @@ function App() {
       <section className={styles.features}>
         
         <CardsServices
-          icon="./../../public/iconheart.svg"
+          icon="/iconheart.svg"
           title="Consultas"
           description="Informações sobre locais disponíveis para marcação de consultas, exames, etc. Quais documentos são necessários para realizar a marcação."
         />
         <CardsServices
-          icon="./../../public/dashboard-icon.svg"
+          icon="/dashboard-icon.svg"
           title="Dashboard"
           description="Indicadores sobre saúde no Maranhão, doenças mais comuns e como se prevenir."
         />
         <CardsServices
-          icon="./../../public/article-icon.svg"
+          icon="/article-icon.svg"
           title="Artigos"
           description="Artigos e revistas sobre saúde disponíveis para tirar dúvidas ou sanar curiosidades."
         />
