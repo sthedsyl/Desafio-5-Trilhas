@@ -3,6 +3,8 @@ import { Trash } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Sidebar from '../componentes/Sidebar';
 import styles from './GerenciarUsuarios.module.css';
+import Swal from 'sweetalert2';
+
 
 const GerenciarUsuarios = () => {
   const navigate = useNavigate();
@@ -17,9 +19,23 @@ const GerenciarUsuarios = () => {
     { id: 8, nome: 'Nome do Usuário', funcao: 'Publicador' },
   ]);
 
-  const handleDelete = (id: number) => {
-    setUsuarios(prev => prev.filter(user => user.id !== id));
-  };
+const handleDelete = (id: number) => {
+  Swal.fire({
+    title: 'Tem certeza?',
+    text: 'Essa ação não poderá ser desfeita!',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#d33',
+    cancelButtonColor: '#3085d6',
+    confirmButtonText: 'Sim, excluir!',
+    cancelButtonText: 'Cancelar',
+  }).then((result) => {
+    if (result.isConfirmed) {
+      setUsuarios((prev) => prev.filter((user) => user.id !== id));
+      Swal.fire('Excluído!', 'O usuário foi removido.', 'success');
+    }
+  });
+};
 
   const handleChange = (id: number, newFuncao: string) => {
     setUsuarios(prev =>
@@ -31,16 +47,12 @@ const GerenciarUsuarios = () => {
     <div className={styles.container}>
       <Sidebar />
       <div className={styles.content}>
-        <div className={styles.header}>
-          <h2>Gerenciar Usuários</h2>
-          <button
-          className={styles.addButton}
-          onClick={() => navigate('/perfil/criar-usuario')}
-        >
-          + Adicionar Usuário
-        </button>
-
-        </div>
+         <div className={styles.header}>
+            <h2>Gerenciar Usuários</h2>
+            <button onClick={() => navigate('/perfil/criar-usuario')}>
+              + Adicionar Usuário
+            </button>
+          </div>
 
         <div className={styles.table}>
           <div className={styles.tableHeader}>
@@ -62,7 +74,8 @@ const GerenciarUsuarios = () => {
                 size={25}
                 color="#1e4a5a"
                 onClick={() => handleDelete(user.id)}
-                style={{ cursor: 'pointer' }}
+                style={{ cursor: 'pointer',  }}
+                
               />
             </div>
           ))}
