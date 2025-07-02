@@ -1,3 +1,4 @@
+import CardsServices from '@/components/home/cards-services'
 import styles from './home.module.css'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           </div>
         </div>
         <img src="./public/66139 (1) 1 (1).png" alt="Ilustração Saúde" className={styles.heroImage} />
+       
       </section>
 
       <h2 className={styles.sectionTitle}>Principais Funcionalidades</h2>
@@ -36,11 +38,27 @@ function App() {
           <p>Artigos e revistas sobre saúde disponíveis para tirar dúvidas ou sanar curiosidades.</p>
           <button className={styles.learnMoreButton}>Saiba mais</button>
         </div>
+        <CardsServices
+          icon="./../../public/iconheart.svg"
+          title="Consultas"
+          description="Informações sobre locais disponíveis para marcação de consultas, exames, etc. Quais documentos são necessários para realizar a marcação."
+        />
+        <CardsServices
+          icon="./../../public/dashboard-icon.svg"
+          title="Dashboard"
+          description="Indicadores sobre saúde no Maranhão, doenças mais comuns e como se prevenir."
+        />
+        <CardsServices
+          icon="./../../public/article-icon.svg"
+          title="Artigos"
+          description="Artigos e revistas sobre saúde disponíveis para tirar dúvidas ou sanar curiosidades."
+        />
       </section>
 
       <section className={styles.objective}>
         <h3>Nosso Objetivo</h3>
         <p>Este site tem como objetivo oferecer informações claras, acessíveis e atualizadas sobre os serviços de saúde pública disponíveis no estado do Maranhão.</p>
+        <p>Este site tem como objetivo oferecer informações claras, acessíveis e <br /> atualizadas sobre os serviços de saúde pública disponíveis no estado do Maranhão.</p>
       </section>
     </>
   )
